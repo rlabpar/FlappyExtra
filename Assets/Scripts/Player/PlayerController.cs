@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (muerto) return; // Si estaba muerto volvemos para evitar que se ejecute varias veces si choca con varias cosas
+       if (muerto) return; // Si estaba muerto volvemos para evitar que se ejecute varias veces si choca con varias cosas
 
         muerto = true;
 

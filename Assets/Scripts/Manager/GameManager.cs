@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
         }
 
         // Si estamos empezando desde el Nivel 1, borramos la memoria de los coins anteriores
-        if (SceneManager.GetActiveScene().name == "Level1" || SceneManager.GetActiveScene().name == "Nivel1")
+        if (SceneManager.GetActiveScene().name == "Level1")
         {
             PlayerPrefs.SetInt("CoinsAcumulados", 0);
             PlayerPrefs.Save();
@@ -63,6 +63,8 @@ public class GameManager : MonoBehaviour
         {
             gameOverText.SetActive(true);
         }
+
+        Debug.Log("¡OH NO! Has tocado un obstaculo");
     }
 
     private void  RestartGame()
@@ -112,7 +114,7 @@ public class GameManager : MonoBehaviour
             panelEND.SetActive(true);
         }
 
-        // Mostramos la puntuación total acumulada usando ToString()
+        // Mostramos la puntuación total acumulada
         if (textoPuntuacion != null)
         {
             textoPuntuacion.text = coinsTotalesAcumulados.ToString();

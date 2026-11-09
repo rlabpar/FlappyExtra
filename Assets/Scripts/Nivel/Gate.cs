@@ -3,14 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class Gate : MonoBehaviour
 {
-
-    private bool gateActivada = false;
-
-    void Awake()
-    {
-        gateActivada = false;
-    }
-
     void Update()
     {
         if (GameManager.Instance.isGameOver) return;
@@ -20,8 +12,9 @@ public class Gate : MonoBehaviour
     {
         if (gate.CompareTag("Player"))
         {
-            gateActivada = true;
             SceneManager.LoadScene("Level2");
         }
+
+        Debug.Log("Vamos al nivel 2");
     }
 }

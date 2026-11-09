@@ -21,7 +21,7 @@ public class TechoVerticalObstaculos : MonoBehaviour
         if (!activarMovimiento) return;
 
         // Calculamos la nueva posición Y usando la función seno
-        transform.Translate(Vector3.down * velocidadVertical * Time.deltaTime);
+        transform.Translate(Vector2.down * velocidadVertical * Time.deltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

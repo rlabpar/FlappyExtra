@@ -22,7 +22,7 @@ public class VerticalObstaculos : MonoBehaviour
         // Calculamos la nueva posición Y usando la función seno
         float nuevaY = posYInicial + Mathf.Sin(Time.time * velocidadVertical) * amplitud;
 
-        // Actualizamos la posición manteniendo la X y la Z intactas
-        transform.position = new Vector3(transform.position.x, nuevaY, transform.position.z);
+        // Actualizamos la posición manteniendo la X
+        transform.position = new Vector2(transform.position.x, nuevaY);
     }
 }

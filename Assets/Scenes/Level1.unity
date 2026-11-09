@@ -2914,6 +2914,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Extra
       objectReference: {fileID: 0}
+    - target: {fileID: 3481911973798800842, guid: df2b651694b4dd945bb925e962ab225d, type: 3}
+      propertyPath: ThrustForce
+      value: 350
+      objectReference: {fileID: 0}
     - target: {fileID: 5971653634481351088, guid: df2b651694b4dd945bb925e962ab225d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
