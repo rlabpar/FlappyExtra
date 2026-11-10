@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     public TMP_Text scoreText; // Arrastrar texto de la UI
 
     public GameObject panelEND;
-    public TextMeshProUGUI textoPuntuacion;
+    public TMP_Text textoPuntuacion;
 
     void Awake() // Se ejecuta automaticamente cuando se carga un GameObject,
                  // antes de que empiece el juego o antes de que se ejecute Start()
@@ -92,7 +92,7 @@ public class GameManager : MonoBehaviour
         coinsTotalesAcumulados++;
 
         // Guardamos en tiempo real en la memoria del juego
-        PlayerPrefs.SetInt("CoinsAcumulados", coinsTotalesAcumulados);
+        PlayerPrefs.SetInt("CoinsAcumulados", coinsTotalesAcumulados); //
         PlayerPrefs.Save();
 
         if (scoreText != null)

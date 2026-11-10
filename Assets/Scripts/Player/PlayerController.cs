@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
         rb.linearVelocity = Vector2.zero; // Velocidad a cero
 
         rb.AddRelativeForce(Vector2.up * ThrustForce); // Aplica una fueza hacia arriba
-                            // Vector2.up --> Equivale a una direccion vertical positiva (0, 1)
+                            // Vector2.up --> Equivale a una direccion vertical positiva (0, 1) --> new Vector2(0, 1)
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -41,8 +41,5 @@ public class PlayerController : MonoBehaviour
         muerto = true;
 
         GameManager.Instance.GameOver(); // Llamamos a GameManager para terminar la partida
-
-        // Frenamos el movimiento horizontal para que caiga recto hacia abajo
-        rb.linearVelocity = Vector2.zero;
     }
 }
